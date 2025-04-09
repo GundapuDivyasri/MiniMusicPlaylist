@@ -1,0 +1,308 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telugu Classic Hits</title>
+  <link rel="stylesheet" href="sample.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="name">My PlayList</div>
+        <img src="musicicon.png" class="icon-logo" alt="musicicon">
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="album.html">Albums</a></li>
+                <li><span id="greeting"></span></li>
+                <li><a href="login.html" id="loginlink">Login</a></li>
+                <li><a href="signup.html" id="signuplink">Sign Up</a></li>
+                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h2 style="color: white; text-align: center; margin-top: 20px;">Bollywood Masthi</h2>
+    
+    
+    <div class="album-management">
+      <div class="album-controls">
+        <button id="createAlbumBtn" class="btn">Create New Album</button>
+        <div class="album-selector">
+          <label for="albumSelect">Select Album:</label>
+          <select id="albumSelect">
+            <option value="">-- Choose Album --</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <div class="song-list">
+        <div class="song" data-src="songs/Tum Hi Ho.mp3" data-title="Tum Hi Ho" data-artist="Arjith Singh" data-album="Aashiqui-2">
+            <img src="b-1.png" alt="Aashiqui 2 Poster" />
+            <div class="song-details">
+              <h3><span>Tum Hi Ho</span> - Aashiqui-2</h3>
+              <p>Artist: Arijit Singh</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                <button class="add-btn">➕ Add to Album</button>
+              </div>
+            </div>
+        </div>
+        
+        <div class="song" data-src="songs/duniya.mp3" data-title="Duniya" data-artist="Akhil & Dhvani Bhanushali" data-album="Luka Chuppi">
+            <img src="b-1.png" alt="Luka Chuppi Poster" />
+            <div class="song-details">
+              <h3><span>Duniya</span> - Luka Chuppi</h3>
+              <p>Artist: Akhil & Dhvani Bhanushali</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                <button class="add-btn">➕ Add to Album</button>
+              </div>
+            </div>
+        </div>
+        
+        <div class="song" data-src="songs/vasthe.mp3" data-title="Vaasthe" data-artist="Dhvani Bhanushali, Nikhil D'Souza">
+            <img src="b-1.png" alt="Vaaste Song Cover" />
+            <div class="song-details">
+              <h3><span>Vaasthe</span></h3>
+              <p>Artist: Dhvani Bhanushali, Nikhil D'Souza</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                <button class="add-btn">➕ Add to Album</button>
+              </div>
+            </div>
+        </div>
+        
+        <div class="song" data-src="songs/apna bane le.mp3" data-title="Apna Bana Le" data-artist="Arijit Singh, Sachin-Jigar" data-album="Bhediya">
+            <img src="b-1.png" alt="Bhediya Poster" />
+            <div class="song-details">
+              <h3><span>Apna Bana le</span> - Bhediya</h3>
+              <p>Artist: Arijit Singh, Sachin-Jigar</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                <button class="add-btn">➕ Add to Album</button>
+              </div>
+            </div>
+        </div>
+        
+        <div class="song" data-src="songs/khairiyat.mp3" data-title="Khairiyat" data-artist="Arijit Singh" data-album="Chhichhore">
+            <img src="b-1.png" alt="Chhichhore Poster" />
+            <div class="song-details">
+              <h3><span>Khairiyat</span> - Chhichhore</h3>
+              <p>Artist: Arijit Singh</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                <button class="add-btn">➕ Add to Album</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    <div class="music-player" id="musicPlayer">
+        <div id="songInfo">
+          <span id="currentSongTitle">Select a song</span> - <span id="currentSongArtist"></span>
+        </div>
+        <div class="controls">
+          <button id="prevBtn">⏮️</button>
+          <button id="playPauseBtn">▶️</button>
+          <button id="nextBtn">⏭️</button>
+        </div>
+        <div class="progress">
+          <span id="currentTime">0:00</span>
+          <input type="range" id="progressBar" value="0" min="0" max="100">
+          <span id="duration">0:00</span>
+        </div>
+        <audio id="audioPlayer"></audio>
+    </div>
+    
+    
+    <div id="albumModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create New Album</h2>
+        <form id="albumForm">
+          <div class="form-group">
+            <label for="albumTitle">Album Title</label>
+            <input type="text" id="albumTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="albumArtist">Artist</label>
+            <input type="text" id="albumArtist" required>
+          </div>
+          <div class="form-group">
+            <label for="albumCover">Cover Image URL</label>
+            <input type="text" id="albumCover">
+          </div>
+          <button type="submit" class="btn">Create Album</button>
+        </form>
+      </div>
+    </div>
+    
+    <script src="music.js"></script>
+    <script>
+      
+      const createAlbumBtn = document.getElementById('createAlbumBtn');
+      const albumModal = document.getElementById('albumModal');
+      const closeModal = document.querySelector('.close');
+      const albumForm = document.getElementById('albumForm');
+      const albumSelect = document.getElementById('albumSelect');
+      
+      
+      createAlbumBtn.addEventListener('click', () => {
+        albumModal.style.display = 'block';
+      });
+      
+      closeModal.addEventListener('click', () => {
+        albumModal.style.display = 'none';
+      });
+      
+      window.addEventListener('click', (e) => {
+        if (e.target === albumModal) {
+          albumModal.style.display = 'none';
+        }
+      });
+      
+      albumForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const title = document.getElementById('albumTitle').value;
+        const artist = document.getElementById('albumArtist').value;
+        const coverImage = document.getElementById('albumCover').value || 'default-cover.jpg';
+        
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+          alert('Please login to create albums');
+          return;
+        }
+        
+        try {
+          const response = await fetch('/api/albums', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              title,
+              artist,
+              coverImage,
+              userId: user._id
+            })
+          });
+          
+          if (!response.ok) throw new Error('Failed to create album');
+          
+          const album = await response.json();
+          addAlbumToSelect(album);
+          albumModal.style.display = 'none';
+          albumForm.reset();
+          alert('Album created successfully!');
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Failed to create album');
+        }
+      });
+      
+     
+      document.addEventListener('DOMContentLoaded', async () => {
+        await loadUserAlbums();
+        setupAddButtons();
+      });
+      
+      
+      async function loadUserAlbums() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user) return;
+        
+        try {
+          const response = await fetch(`/api/albums/user/${user._id}`);
+          if (!response.ok) throw new Error('Failed to load albums');
+          
+          const albums = await response.json();
+          albumSelect.innerHTML = '<option value="">-- Choose Album --</option>';
+          albums.forEach(album => addAlbumToSelect(album));
+        } catch (error) {
+          console.error('Error loading albums:', error);
+        }
+      }
+      
+      function addAlbumToSelect(album) {
+        const option = document.createElement('option');
+        option.value = album._id;
+        option.textContent = `${album.title} - ${album.artist}`;
+        albumSelect.appendChild(option);
+      }
+      
+      function setupAddButtons() {
+        document.querySelectorAll('.add-btn').forEach(btn => {
+          btn.addEventListener('click', async function() {
+            const songCard = this.closest('.song');
+            const albumId = albumSelect.value;
+            
+            if (!albumId) {
+              alert('Please select an album first');
+              return;
+            }
+            
+            const songData = {
+              title: songCard.dataset.title,
+              artist: songCard.dataset.artist,
+              duration: 180, 
+              filePath: songCard.dataset.src,
+              album: songCard.dataset.album || 'Various'
+            };
+            
+            try {
+              const response = await fetch(`/api/albums/${albumId}/songs`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(songData)
+              });
+              
+              if (!response.ok) throw new Error('Failed to add song');
+              
+              alert('Song added to album successfully!');
+            } catch (error) {
+              console.error('Error:', error);
+              alert('Failed to add song to album');
+            }
+          });
+        });
+      }
+      
+      
+      function checkLoginStatus() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        const greeting = document.getElementById('greeting');
+        const loginLink = document.getElementById('loginlink');
+        const logoutLink = document.getElementById('logoutLink');
+        
+        if (user) {
+          greeting.textContent = `Hello, ${user.name}`;
+          loginLink.style.display = 'none';
+          signupLink.style.display = 'none';
+          logoutLink.style.display = 'block';
+        } else {
+          greeting.textContent = '';
+          loginLink.style.display = 'block';
+          signupLink.style.display = 'block';
+          logoutLink.style.display = 'none';
+        }
+      }
+      
+      
+      document.getElementById('logoutLink')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.removeItem('user');
+        checkLoginStatus();
+        window.location.href = 'index.html';
+      });
+      
+      
+      checkLoginStatus();
+    </script>
+</body>
+</html> -->

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telugu Classic Hits</title>
+  <link rel="stylesheet" href="sample.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="name">My PlayList</div>
+        <img src="musicicon.png" class="icon-logo" alt="musicicon">
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><span id="greeting"></span></li>
+                <li><a href="login.html" id="loginlink">Login</a></li>
+                <li><a href="signup.html" id="signuplink">Sign Up</a></li>
+                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+  <h2 style="color: white; text-align: center; margin-top: 20px;">Telugu Super Hit Classic Songs</h2>
+  <div class="song-list">
+    <div class="song" data-src="songs/premalo.mp3" data-title="Premalo from Court" data-artist="Purna Chary Challury">
+      <img src="t-1.png" alt="Mayabazar" />
+      <div class="song-details">
+        <h4><span>Premalo-</span>Court</h4>
+        <p>🎤Artist: Purna Chary Challury🎤</p>
+        <div class="song-actions">
+          <button class="play-btn">▶️ Play</button>
+          
+        </div>
+      </div>
+    </div>
+    <div class="song" data-src="songs/srimatigaru.mp3" data-title="Sri mathi garu-Lucky Bhaskar" data-artist="Anurag Kulakarni">
+        <img src="t-1.png" alt="logo" />
+        <div class="song-details">
+          <h4><span>Sri mathi garu-</span>Lucky Bhaskar</h4>
+          <p>🎤Artist:Anurag Kulakarni🎤</p>
+          <div class="song-actions">
+            <button class="play-btn">▶️ Play</button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="song" data-src="songs/kumkumala.mp3" data-title="Kumkumala-Brahmastra" data-artist="Pritam">
+        <img src="t-1.png" alt="logo" />
+        <div class="song-details">
+          <h4><span>Kumkumala-</span>Brahmastra</h4>
+          <p>🎤Artist: Pritam🎤</p>
+          <div class="song-actions">
+            <button class="play-btn">▶️ Play</button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="song" data-src="songs/nagumomu.mp3" data-title="Nagumomu Thaarale-Radhe Shyam" data-artist="Justin Prabhakaran">
+        <img src="t-1.png" alt="logo" />
+        <div class="song-details">
+          <h4><span>Nagumomu Thaarale-</span>Radhe Shyam</h4>
+          <p>🎤Artist: Justin Prabhakaran🎤</p>
+          <div class="song-actions">
+            <button class="play-btn">▶️ Play</button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="song" data-src="songs/kola kalle ila.mp3" data-title="Kola Kalle Ilaa-Varudu Kaavalenu" data-artist="Vishal Chandrashekhar">
+        <img src="t-1.png" alt="logo" />
+        <div class="song-details">
+          <h4><span>kola Kalle Ilaa-</span>Varudu Kaavalenu</h4>
+          <p>🎤Artist: Vishal Chandrashekhar🎤</p>
+          <div class="song-actions">
+            <button class="play-btn">▶️ Play</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="music-player" id="musicPlayer">
+      <div id="songInfo">
+        <span id="currentSongTitle">Select a song</span> - <span id="currentSongArtist"></span>
+      </div>
+      <div class="controls">
+        <button id="prevBtn">⏮️</button>
+        <button id="playPauseBtn">▶️</button>
+        <button id="nextBtn">⏭️</button>
+      </div>
+      <div class="progress">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="progressBar" value="0" min="0" max="100">
+        <span id="duration">0:00</span>
+      </div>
+      <audio id="audioPlayer"></audio>
+    </div>
+    <script src="music.js"></script>
+    
+    
+</body>
+</html>      
+            

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telugu Classic Hits</title>
+  <link rel="stylesheet" href="sample.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="name">My PlayList</div>
+        <img src="musicicon.png" class="icon-logo" alt="musicicon">
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><span id="greeting"></span></li>
+                <li><a href="login.html" id="loginlink">Login</a></li>
+                <li><a href="signup.html" id="signuplink">Sign Up</a></li>
+                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <h2 style="color: white; text-align: center; margin-top: 20px;">Feel the soul of Tamil music</h2>
+    <div class="song-list">
+        <div class="song" data-src="songs/one love.mp3" data-title="One Love" data-artist="Shubh">
+            <img src="p-1.jpg" alt="logo" />
+            <div class="song-details">
+              <h4><span>One Love-</span>Shubh</h4>
+              <p>Artist:Shubh</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+              </div>
+            </div>
+          </div>
+          <div class="song" data-src="songs/Water.mp3" data-title="Water" data-artist=" Diljit Dosanjh">
+            <img src="p-1.jpg" alt="logo" />
+            <div class="song-details">
+              <h4><span>Water</span></h4>
+              <p>Artist: Diljit Dosanjh</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                
+              </div>
+            </div>
+          </div>
+          <div class="song" data-src="songs/softly.mp3" data-title="Softly" data-artist="Karan Aujla">
+            <img src="p-1.jpg" alt="logo" />
+            <div class="song-details">
+              <h4><span>Softly</span></h4>
+              <p>Artist: Karan Aujla</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                
+              </div>
+            </div>
+          </div>
+          <div class="song" data-src="songs/obessed.mp3" data-title="Obessed" data-artist="Riar Saab ft.Abhijay Sharma">
+            <img src="p-1.jpg" alt="logo" />
+            <div class="song-details">
+              <h4><span>Obsessed</span></h4>
+              <p>Artists:Riar Saab ft.Abhijay Sharma</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                
+              </div>
+            </div>
+          </div>
+          <div class="song" data-src="songs/Ve Haniya.mp3" data-title="Ve Haniya" data-artist="Ammy Virk">
+            <img src="p-1.jpg" alt="logo" />
+            <div class="song-details">
+              <h4><span>Ve Haniya</span></h4>
+              <p>Ammy Virk</p>
+              <div class="song-actions">
+                <button class="play-btn">▶️ Play</button>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="music-player" id="musicPlayer">
+      <div id="songInfo">
+        <span id="currentSongTitle">Select a song</span> - <span id="currentSongArtist"></span>
+      </div>
+      <div class="controls">
+        <button id="prevBtn">⏮️</button>
+        <button id="playPauseBtn">▶️</button>
+        <button id="nextBtn">⏭️</button>
+      </div>
+      <div class="progress">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="progressBar" value="0" min="0" max="100">
+        <span id="duration">0:00</span>
+      </div>
+      <audio id="audioPlayer"></audio>
+    </div>
+   
+    
+    <script src="music.js"></script>
+    </body>
+    </html>

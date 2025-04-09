@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="name">My PlayList</div>
+        <img src="musicicon.png" class="icon-logo" alt="musicicon">
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><span id="greeting"></span></li>
+                <li><a href="login.html" id="loginlink">Login</a></li>
+                <li><a href="signup.html" id="signuplink">Sign Up</a></li>
+                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        
+        <section class="content-tag">
+            <div id="userGreeting"></div>
+        <div class="tagline">Feel The Rhythm,Own the PlayList!</div>
+        <a href="signup.html" class="start-button">Get Started</a>
+        <!-- <button class="start-button">Get Started</button> -->
+        <p class="tag">Dive into a world of endless melodies where every beat tells your story. Curate, customize, and share your unique playlists effortlessly.</p>
+        
+        </section>
+        <section class="playlists">
+            <h2>Trending PlayLists</h2>
+            <div class="playlist-div">
+                <div class="playlists">
+                    <img src="playlist-1bg.jpg" alt="telugu music">
+                    <a href="classics.html">Telugu Chill Beats</a>
+                    <p>Relax & Unwind</p>
+                </div>
+                <div class="playlists">
+                    <img src="playlist-2bg.jpg" alt="punjabi music">
+                    <a href="punjabi.html">Punjabi Top Beats</a>
+                    <p>Trending Now</p>
+                </div>
+                <div class="playlists">
+                    <img src="playlist-5.png" alt="tamil music">
+                    <a href="tamil.html">Tamil cool</a>
+                    <p>Refresh On</p>
+                </div>
+                <div class="playlists">
+                    <img src="playlist-4.png" alt="bollywood music">
+                    <a href="bollywood.html">Bollywood Hits</a>
+                    <p>Bang On</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy;Myplaylist.All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">About |</a></li>
+            <li><a href="#">Contacts |</a></li>
+            <li><a href="#">Private policy</a></li>
+        </ul>
+    </footer>
+    <script src="logic.js"></script>
+    <script src="greeting.js"></script>
+</body>
+</html>

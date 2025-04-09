@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <link rel="stylesheet" href="explorestyle.css">
+    <script src="logic.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="name">My PlayList</div>
+        <img src="musicicon.png" class="icon-logo" alt="musicicon">
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><span id="greeting"></span></li>
+                <li><a href="login.html" id="loginlink">Login</a></li>
+                <li><a href="signup.html" id="signuplink">Sign Up</a></li>
+                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p id="tagline">Explore your favourite music in your favourite language</p>
+        
+        <div class="genres-div">
+            <div class="genres">
+                <img src="teluguicon.jpg" alt="telugu music">
+                <a href="classics.html" class="genre-box">Telugu Classics</a>
+            </div>
+            <div class="genres">
+                <img src="punjabiicon.jpg" alt="punjabi music">
+                <a href="punjabi.html" class="genre-box">Punjabi beats</a>
+            </div>
+            <div class="genres">
+                <img src="tamilicon.jpeg" alt="tamil music">
+                <a href="tamil.html" class="genre-box">Tamil Vibes</a>
+            </div>
+            <div class="genres">
+                <img src="bollymusic.png" alt="bollywood music">
+                <a href="bollywood.html" class="genre-box">Bollywood</a>
+            </div>
+    
+        <div class="songs-section" id="songsSection" style="padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+          <!-- Songs will appear here -->
+        </div>
+      </main>
+    
+      <script src="explore.js"></script>
+    </body>
+    </html>

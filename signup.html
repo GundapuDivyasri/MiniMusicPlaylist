@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup_style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="name">My PlayList</div>
+        <img src="musicicon.png" class="icon-logo" alt="musicicon">
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="musiclogo">
+        <img src="musiclog.png" alt="musiclogo">
+    </div>
+    <div class="container1">
+        <p id="heading">Sign Up</p>
+        <form id="signupForm">
+            <input type="text" id="name" name="user_name" placeholder="Name"/>
+            <input type="email" id="email" name="email" placeholder="Email"/>
+            <input type="password" id="password" name="pwd" placeholder="Password"/>
+            <center><button type="submit" name="button">Sign Up</button></center>
+        </form>
+        <p>Already have an account?<a href="login.html" id="login-link">Login</a></p>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
