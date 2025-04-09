@@ -6,7 +6,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
@@ -14,10 +14,12 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
-
+app.get("/", (req, res) => {
+  res.send("🎵 Backend is live!");
+});
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/musicapp', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
