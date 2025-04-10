@@ -48,7 +48,6 @@ document.getElementById("loginForm")?.addEventListener("submit", async function 
   }
 }); 
 
-// Show Greeting on Homepage
 window.addEventListener("DOMContentLoaded", function () {
   const isLoggedIn = localStorage.getItem("loggedIn");
   const username = localStorage.getItem("username");
@@ -64,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function () {
     if (signupLink) signupLink.style.display = "none";
     if (logoutLink) logoutLink.style.display = "inline";
   } else {
-    // If not logged in, hide greeting and show login/signup
+    
     if (nameElement) nameElement.textContent = "";
     if (loginLink) loginLink.style.display = "inline";
     if (signupLink) signupLink.style.display = "inline";
@@ -74,7 +73,7 @@ window.addEventListener("DOMContentLoaded", function () {
     logoutLink.addEventListener("click", () => {
       localStorage.removeItem("token");
       localStorage.removeItem("username");
-      localStorage.removeItem("loggedIn"); // ✅ also remove this
+      localStorage.removeItem("loggedIn"); 
       window.location.href = "index.html";
     });
   }

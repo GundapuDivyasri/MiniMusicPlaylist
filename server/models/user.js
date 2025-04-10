@@ -20,29 +20,3 @@ const UserSchema = new mongoose.Schema({
 
 module.exports = mongoose.model('User', UserSchema);
 
-/* const mongoose = require('mongoose');
-
-const songSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true
-  },
-  duration: {
-    type: Number,
-    required: true
-  },
-  filePath: {
-    type: String,
-    required: true
-  },
-  album: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Album'
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
-});
-
-module.exports = mongoose.model('Song', songSchema); */
