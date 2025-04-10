@@ -54,7 +54,7 @@ function playPrev() {
   loadSong(prevIndex);
 }
 audioPlayer.addEventListener('ended', () => {
-  playPauseBtn.textContent = '▶️';
+  playNext();
 });
 
 
