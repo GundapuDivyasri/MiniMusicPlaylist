@@ -50,6 +50,10 @@ function playPrev() {
   let prevIndex = (currentIndex - 1 + songs.length) % songs.length;
   loadSong(prevIndex);
 }
+audioPlayer.addEventListener('ended', () => {
+  playPauseBtn.textContent = '▶️';
+});
+
 
 playBtns.forEach((btn, index) => {
   btn.addEventListener('click', () => loadSong(index));
