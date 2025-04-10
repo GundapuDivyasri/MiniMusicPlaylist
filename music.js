@@ -12,6 +12,7 @@ const durationEl = document.getElementById('duration');
 
 let songs = Array.from(document.querySelectorAll('.song'));
 let currentIndex = -1;
+const BASE_URL = "https://musicplaylist-backend.onrender.com/songs/";
 
 function formatTime(seconds) {
   let mins = Math.floor(seconds / 60);
@@ -22,8 +23,10 @@ function formatTime(seconds) {
 function loadSong(index) {
   const song = songs[index];
   if (!song) return;
+  const fileName = song.dataset.src;
+  audioPlayer.src = `${BASE_URL}${fileName}`;
 
-  audioPlayer.src = song.dataset.src;
+  //audioPlayer.src = song.dataset.src;
   currentSongTitle.textContent = song.dataset.title;
   currentSongArtist.textContent = song.dataset.artist;
   audioPlayer.play();
