@@ -1,4 +1,4 @@
-*{
+ *{
     padding:0;
     margin:0;
     box-sizing: border-box;
@@ -181,6 +181,7 @@ p{
 
 .nav-links li:hover{
     text-decoration: underline;
+    color:red;
 }
 .start-button:hover {
     text-decoration: none;
@@ -191,7 +192,124 @@ p{
 .playlists a:hover{
     color:red;
 }
+
+@media (max-width: 1024px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-right: 10px;
+    }
+
+    .name {
+        font-size: 20px;
+        padding-left: 10px;
+        position: static;
+    }
+
+    .content-tag {
+        background-size: cover;
+        padding: 20px 10px;
+        text-align: left;
+    }
+
+    .tagline {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .tag {
+        font-size: 14px;
+        margin-left: 10px;
+        width: 90%;
+    }
+
+    .start-button {
+        margin-left: 10px;
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    .playlist-div {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .playlists img {
+        height: 150px;
+        width: 120px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .nav-bar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .content-tag {
+        height: auto;
+        background-size: contain;
+        padding-bottom: 30px;
+    }
+
+    .tagline {
+        font-size: 20px;
+    }
+
+    .tag {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .start-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .playlist-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .playlists {
+        width: 80%;
+    }
+
+    img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    #userGreeting {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
   
 
 
 
+ 
