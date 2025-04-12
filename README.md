@@ -8,7 +8,8 @@ Tech stack:
         Express,MongoDB
 This mini musicplaylist UI is designed using html,css,js.
 The Home Page contains nav bar consisting of Sections Home,Login,SignUp,Explore.
-The Home displays the theme of project and some trending Lnaguage based music playlists.
+The Home page displays the theme of project and some trending Language based music playlists.
+When user logins it dsiplays a greeting message mentioning their name.
 To store the user credentials I used mongodb to store user login credentials.
 And used express for routing purpose.
 In the explore section also we can explore songs based on languages like Telugu,Hindi,Punjabi,Tamil.
