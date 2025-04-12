@@ -117,3 +117,91 @@ button{
 #signup-link{
     color:#007bff;
 }
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    .name {
+      position: static;
+      padding-left: 0;
+      font-size: 22px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    .nav-bar {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      gap: 10px;
+    }
+  
+    .musiclogo {
+      position: static;
+      margin: 20px auto 10px;
+      text-align: center;
+    }
+  
+    .musiclogo img {
+      width: 220px;
+      height: 220px;
+    }
+  
+    .container {
+      position: static;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 320px;
+      height: auto;
+      padding: 20px 0;
+    }
+  
+    #heading {
+      position: static;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    input {
+      width: 90%;
+      margin: 10px auto 0;
+    }
+  
+    button {
+      width: 70%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .name {
+      font-size: 20px;
+    }
+  
+    .musiclogo img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    #heading {
+      font-size: 18px;
+    }
+  
+    input {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

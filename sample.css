@@ -1,4 +1,3 @@
-/* Reset some default browser styles */
 *{
   padding:0;
   margin:0;
@@ -203,6 +202,103 @@ span{
   min-width: 40px;
   text-align: center;
   color:white;
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .song {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .song img {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .song-details {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .song-details p {
+    font-size: 14px;
+  }
+
+  .song-actions {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .add-btn, .play-btn {
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .progress {
+    flex-direction: column;
+    gap: 5px;
+    width: 95%;
+  }
+
+  #progressBar {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-bar {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .name {
+    position: static;
+    font-size: 20px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .song {
+    width: 95%;
+  }
+
+  .song-details {
+    gap: 5px;
+  }
+
+  .add-btn, .play-btn {
+    font-size: 12px;
+    width: 60px;
+  }
+
+  #currentTime, #duration {
+    font-size: 12px;
+    min-width: 30px;
+  }
+
+  .controls button {
+    font-size: 18px;
+  }
 }
 
  

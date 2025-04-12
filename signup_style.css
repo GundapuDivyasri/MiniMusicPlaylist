@@ -117,3 +117,111 @@ button{
     color:#007bff;
 
 }
+@media (max-width: 768px) {
+    .musiclogo {
+      position: static;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .musiclogo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  
+    .container1 {
+      position: static;
+      width: 90%;
+      margin: 20px auto;
+      height: auto;
+      padding: 20px 10px;
+      box-sizing: border-box;
+    }
+  
+    input {
+      width: 90%;
+      margin-left: 0;
+    }
+  
+    button {
+      width: 60%;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .musiclogo img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    button {
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    input {
+      height: 28px;
+    }
+  
+    #heading {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0;
+      align-items: center;
+    }
+  
+    .name {
+      position: static;
+      padding-left: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+      text-align: center;
+    }
+  
+    .nav-bar {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .icon-logo {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    a {
+      font-size: 16px;
+    }
+  
+    .icon-logo {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .name {
+      font-size: 20px;
+    }
+  }
+    

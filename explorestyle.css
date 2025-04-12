@@ -102,3 +102,81 @@ img:hover{
 .genres a:hover{
     color:red;
 }
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    .name {
+      position: static;
+      padding-left: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+      text-align: center;
+    }
+  
+    .nav-bar {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      gap: 10px;
+    }
+  
+    .icon-logo {
+      margin-top: 10px;
+    }
+  
+    .genres-div {
+      flex-direction: column;
+      margin-left: 0;
+      gap: 30px;
+    }
+  
+    img {
+      width: 130px;
+      height: 160px;
+    }
+  
+    #tagline {
+      font-size: 24px;
+      text-align: center;
+      padding: 0 10px;
+    }
+  
+    a {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .name {
+      font-size: 20px;
+    }
+  
+    .icon-logo {
+      width: 30px;
+      height: 30px;
+    }
+  
+    img {
+      width: 120px;
+      height: 140px;
+    }
+  
+    #tagline {
+      font-size: 20px;
+    }
+  
+    a {
+      font-size: 16px;
+    }
+  }
+  
