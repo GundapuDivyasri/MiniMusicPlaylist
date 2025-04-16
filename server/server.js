@@ -16,7 +16,8 @@ app.use('/songs', express.static(path.join(__dirname,'../songs')));
 app.use('/api/auth', authRoutes);
 
 app.get("/", (req, res) => {
-  res.send("🎵 Backend is live!");
+  // res.send("🎵 Backend is live!");
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 
