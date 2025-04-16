@@ -17,6 +17,7 @@ In the explore section also we can explore songs based on languages like Telugu,
 Finally deployed project using:
 Frontend:Vercel
 Backend:Render
+To experience the mini-playlist:https://musicplaylist-backend.onrender.com/
 
 Future view:
         Is to create a album section where user can add,delete albums.
